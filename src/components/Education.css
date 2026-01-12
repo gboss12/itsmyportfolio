@@ -1,0 +1,251 @@
+.education {
+  position: relative;
+  overflow: hidden;
+}
+
+.education::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 30% 70%, rgba(102, 126, 234, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 70% 30%, rgba(118, 75, 162, 0.05) 0%, transparent 50%);
+  z-index: 1;
+}
+
+.education .container {
+  position: relative;
+  z-index: 2;
+}
+
+.education-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.education-item {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(102, 126, 234, 0.1);
+  animation: fadeInUp 0.8s ease;
+}
+
+.education-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #667eea, #764ba2, #667eea);
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease infinite;
+}
+
+.education-item::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(102, 126, 234, 0.03), transparent);
+  transform: rotate(45deg);
+  animation: shimmer 8s ease-in-out infinite;
+}
+
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  gap: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.education-header h3 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.3;
+  flex: 1;
+}
+
+.year {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 700;
+  white-space: nowrap;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.year::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2));
+  transition: left 0.5s ease;
+}
+
+.year:hover::before {
+  left: 100%;
+}
+
+.education-item h4 {
+  color: #667eea;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  position: relative;
+  z-index: 2;
+}
+
+.education-item > p {
+  color: #666;
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.coursework {
+  position: relative;
+  z-index: 2;
+}
+
+.coursework h5 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  position: relative;
+}
+
+.coursework h5::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 2px;
+}
+
+.coursework ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  list-style: none;
+}
+
+.coursework li {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid #667eea;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.coursework li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+  transition: left 0.3s ease;
+}
+
+.coursework li:hover::before {
+  left: 0;
+}
+
+.coursework li:hover {
+  transform: translateX(10px) translateY(-3px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.15);
+  border-left-color: #764ba2;
+}
+
+.coursework li:nth-child(odd) {
+  border-left-color: #ff6b6b;
+}
+
+.coursework li:nth-child(even) {
+  border-left-color: #4ecdc4;
+}
+
+.coursework li:nth-child(3n) {
+  border-left-color: #ffd700;
+}
+
+/* Achievement badges */
+.achievements {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+}
+
+.achievement-badge {
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+  color: #333;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.achievement-badge:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+  .education-item {
+    padding: 2rem;
+  }
+  
+  .education-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .education-header h3 {
+    font-size: 1.5rem;
+  }
+  
+  .coursework ul {
+    grid-template-columns: 1fr;
+  }
+  
+  .achievements {
+    justify-content: center;
+  }
+}
