@@ -136,6 +136,8 @@
   margin-bottom: 2rem;
   font-size: 1.05rem;
   text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
 }
 
 .project-technologies {
@@ -254,6 +256,9 @@
   .project-card p {
     font-size: 0.95rem;
     text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    word-spacing: 0;
   }
   
   .project-actions {
