@@ -367,22 +367,32 @@
 
 @media (max-width: 768px) {
   .nav {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
     padding: 0.8rem 1rem;
-    gap: 0.8rem;
+    gap: 0.5rem;
     position: fixed;
     top: 0;
   }
   
+  .logo {
+    order: 1;
+  }
+  
   .logo h2 {
     font-size: 1.3rem;
+    margin: 0;
   }
   
   .nav-links {
+    order: 2;
     gap: 0.8rem;
     flex-wrap: wrap;
     justify-content: center;
     font-size: 0.85rem;
+    width: 100%;
+    margin-top: 0.5rem;
   }
   
   .nav-links li {
@@ -397,9 +407,7 @@
   .theme-toggle {
     width: 35px;
     height: 35px;
-    position: absolute;
-    top: 0.8rem;
-    right: 1rem;
+    order: 3;
   }
   
   .theme-icon {
