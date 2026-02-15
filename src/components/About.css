@@ -44,6 +44,8 @@
   color: var(--text-secondary);
   position: relative;
   padding-left: 20px;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .about-text p::before {
@@ -156,7 +158,10 @@
     font-size: 0.95rem;
     line-height: 1.7;
     text-align: justify;
+    text-justify: inter-word;
     padding: 0 0.5rem;
+    hyphens: auto;
+    word-spacing: -0.05em;
   }
   
   .about-text p:first-child {
