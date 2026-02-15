@@ -1,7 +1,7 @@
 .skills {
   position: relative;
   background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
-  color: rgb(0, 0, 0);
+  color: white;
   overflow: hidden;
 }
 
@@ -54,8 +54,8 @@
 }
 
 .nav-btn {
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: rgba(102, 126, 234, 0.2);
+  border: 2px solid rgba(102, 126, 234, 0.4);
   color: white;
   padding: 1rem 2rem;
   border-radius: 50px;
@@ -78,7 +78,7 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.3), transparent);
   transition: left 0.5s ease;
 }
 
@@ -88,14 +88,15 @@
 
 .nav-btn:hover {
   transform: translateY(-3px) scale(1.05);
-  border-color: rgba(0, 255, 255, 0.5);
-  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+  border-color: rgba(102, 126, 234, 0.8);
+  background: rgba(102, 126, 234, 0.3);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
 }
 
 .nav-btn.active {
-  background: linear-gradient(135deg, rgba(0, 255, 255, 0.2), rgba(255, 0, 255, 0.2));
-  border-color: #00ffff;
-  box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.4), rgba(118, 75, 162, 0.4));
+  border-color: #667eea;
+  box-shadow: 0 0 30px rgba(102, 126, 234, 0.6);
   transform: translateY(-3px);
 }
 
@@ -163,6 +164,7 @@
   font-size: 1.1rem;
   opacity: 0.8;
   line-height: 1.6;
+  color: white;
 }
 
 /* Progress Grid */
@@ -215,6 +217,7 @@
 .skill-name {
   font-weight: 600;
   font-size: 1.1rem;
+  color: white;
 }
 
 .skill-percentage {
@@ -321,6 +324,7 @@
   font-size: 1.1rem;
   position: relative;
   z-index: 2;
+  color: white;
 }
 
 /* Skills Summary */
@@ -378,6 +382,7 @@
   opacity: 0.8;
   text-transform: uppercase;
   letter-spacing: 1px;
+  color: white;
 }
 
 /* Responsive Design */

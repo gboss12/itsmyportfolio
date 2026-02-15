@@ -16,11 +16,11 @@ const Skills: React.FC = () => {
       icon: "🎨",
       description: "Creating beautiful and responsive user interfaces",
       skills: [
-        { name: "React", level: 70, color: "#000000ff" },
-        { name: "TypeScript", level: 85, color: "#000000ff" },
+        { name: "React", level: 70, color: "#61DAFB" },
+        { name: "TypeScript", level: 85, color: "#3178C6" },
         { name: "JavaScript", level: 85, color: "#F7DF1E" },
         { name: "HTML/CSS", level: 92, color: "#E34F26" },
-        { name: "Tailwind CSS", level: 70, color: "#000000ff" },
+        { name: "Tailwind CSS", level: 70, color: "#06B6D4" },
         { name: "SASS/SCSS", level: 75, color: "#CC6699" }
       ]
     },
