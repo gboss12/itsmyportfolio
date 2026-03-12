@@ -17,11 +17,11 @@ const Skills: React.FC = () => {
       description: "Creating beautiful and responsive user interfaces",
       skills: [
         { name: "React", level: 70, color: "#61DAFB" },
-        { name: "TypeScript", level: 85, color: "#3178C6" },
+        { name: "C++", level: 85, color: "#00599C" },
         { name: "JavaScript", level: 85, color: "#F7DF1E" },
         { name: "HTML/CSS", level: 92, color: "#E34F26" },
-        { name: "Tailwind CSS", level: 70, color: "#06B6D4" },
-        { name: "SASS/SCSS", level: 75, color: "#CC6699" }
+        { name: "Java", level: 70, color: "#ED8B00" },
+        { name: "Python", level: 75, color: "#3776AB" }
       ]
     },
     {
@@ -120,19 +120,6 @@ const Skills: React.FC = () => {
                     }}
                   ></div>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Soft Skills Section */}
-        <div className="soft-skills-section">
-          <h3>Core Competencies</h3>
-          <div className="soft-skills-grid">
-            {softSkills.map((skill, index) => (
-              <div key={index} className="soft-skill-card">
-                <div className="soft-skill-icon">{skill.icon}</div>
-                <span className="soft-skill-name">{skill.name}</span>
               </div>
             ))}
           </div>

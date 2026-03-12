@@ -365,19 +365,64 @@
   }
 }
 
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
 @media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+  
   .nav {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
     padding: 0.8rem 1rem;
-    gap: 0.5rem;
+    gap: 0;
     position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
+    height: auto;
+  }
+  
+  .nav > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
   }
   
   .logo {
-    order: 1;
+    flex: 1;
   }
   
   .logo h2 {
@@ -386,32 +431,46 @@
   }
   
   .nav-links {
-    order: 2;
-    gap: 0.8rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    font-size: 0.85rem;
+    display: none;
+    flex-direction: column;
+    gap: 0;
     width: 100%;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(15, 0, 80, 0.2);
+    border-radius: 0 0 10px 10px;
+  }
+  
+  .nav-links.active {
+    display: flex;
   }
   
   .nav-links li {
     margin: 0;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .nav-links li:last-child {
+    border-bottom: none;
   }
   
   .nav-links a {
-    font-size: 0.85rem;
-    padding: 0.3rem 0;
+    font-size: 1rem;
+    padding: 0;
+    display: block;
   }
   
   .theme-toggle {
-    width: 35px;
-    height: 35px;
-    order: 3;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
   
   .theme-icon {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   
   .hero {
